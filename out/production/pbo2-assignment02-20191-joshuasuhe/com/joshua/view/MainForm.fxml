@@ -57,12 +57,6 @@
                         <Label text="Category" GridPane.rowIndex="2" />
                         <TextField fx:id="txtName" GridPane.columnIndex="1" />
                         <TextField fx:id="txtPrice" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <MenuButton fx:id="menuButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="222.0" text="MenuButton" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS">
-                            <items>
-                                <MenuItem mnemonicParsing="false" text="Action 1" />
-                                <MenuItem mnemonicParsing="false" text="Action 2" />
-                            </items>
-                        </MenuButton>
                         <Label prefHeight="17.0" prefWidth="124.0" text="Category Name" GridPane.columnIndex="2">
                             <GridPane.margin>
                                 <Insets left="10.0" />
@@ -76,20 +70,21 @@
                         <Button mnemonicParsing="false" onAction="#savecatAction" text="Save Category" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
                         <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                             <children>
-                                <Button mnemonicParsing="false" onAction="#saveAction" text="Save" />
-                                <Button mnemonicParsing="false" onAction="#resetAction" text="Reset" />
-                                <Button mnemonicParsing="false" onAction="#updateAction" text="Update" />
+                                <Button fx:id="btnSave" mnemonicParsing="false" onAction="#saveAction" text="Save" />
+                                <Button fx:id="btnReset" mnemonicParsing="false" onAction="#resetAction" text="Reset" />
+                                <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#updateAction" text="Update" />
                             </children>
                             <GridPane.margin>
                                 <Insets top="5.0" />
                             </GridPane.margin>
                         </HBox>
+                  <ComboBox fx:id="combobox" prefHeight="25.0" prefWidth="217.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                     </children>
                     <padding>
                         <Insets bottom="5.0" left="5.0" right="5.0" />
                     </padding>
                 </GridPane>
-                <TableView onMouseClicked="#tableClicked" prefHeight="200.0" prefWidth="200.0" tableMenuButtonVisible="true" VBox.vgrow="ALWAYS" fx:id="tableDepartment">
+                <TableView fx:id="tableDepartment" onMouseClicked="#tableClicked" prefHeight="200.0" prefWidth="200.0" tableMenuButtonVisible="true" VBox.vgrow="ALWAYS">
                     <columns>
                         <TableColumn fx:id="col01" prefWidth="191.0" text="Name" />
                         <TableColumn fx:id="col02" prefWidth="199.0" text="Price" />
